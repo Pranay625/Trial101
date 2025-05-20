@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Recipe Book</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">🍽️ Recipe Book</div>
+    <input type="text" id="searchInput" placeholder="Search recipes..." />
+    <button id="toggleDarkMode">🌙</button>
+    <button id="toggleFavorites">❤️ Favorites</button>
+  </nav>
+
+  <!-- Category Filters -->
+  <div class="filters">
+    <button class="filter-btn" data-category="all">All</button>
+    <button class="filter-btn" data-category="pasta">Pasta</button>
+    <button class="filter-btn" data-category="salad">Salad</button>
+    <button class="filter-btn" data-category="dessert">Dessert</button>
+  </div>
+
+  <!-- Recipe Grid -->
+  <main class="recipe-grid" id="recipeGrid">
+    <div class="recipe-card" data-name="spaghetti" data-category="pasta">
+      <img src="images/pasta.jpg" alt="Spaghetti" />
+      <h2>Classic Spaghetti</h2>
+      <p>Tomato, garlic, and olive oil magic.</p>
+      <button class="fav-btn">❤️</button>
+    </div>
+
+    <div class="recipe-card" data-name="salad" data-category="salad">
+      <img src="https://source.unsplash.com/400x300/?salad" alt="Salad" />
+      <h2>Garden Salad</h2>
+      <p>Fresh greens and herbs.</p>
+      <button class="fav-btn">❤️</button>
+    </div>
+
+    <div class="recipe-card" data-name="pizza" data-category="pasta">
+      <img src="https://source.unsplash.com/400x300/?pizza" alt="Pizza" />
+      <h2>Margherita Pizza</h2>
+      <p>Cheesy and oven-baked.</p>
+      <button class="fav-btn">❤️</button>
+    </div>
+
+    <div class="recipe-card" data-name="risotto" data-category="pasta">
+      <img src="https://source.unsplash.com/400x300/?risotto" alt="Risotto" />
+      <h2>Mushroom Risotto</h2>
+      <p>Creamy rice dish with mushrooms.</p>
+      <button class="fav-btn">❤️</button>
+    </div>
+
+    <div class="recipe-card" data-name="tiramisu" data-category="dessert"></div>
+
+    <div class="recipe-card" data-id="1">
+      <h3>Spaghetti Carbonara</h3>
+      <p>A classic Italian pasta dish.</p>
+      <button class="view-details-btn">View Details</button>
+    </div>
+
+    <div id="recipeModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+        <ul id="modalIngredients"></ul>
+        <p id="modalInstructions"></p>
+      </div>
+    </div>
+    
+    
